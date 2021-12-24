@@ -37,6 +37,9 @@ function onDataReceived(text) {
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
+  if (text === 'list\n'){
+    list();
+  }
   else if(text.trim().split(" ")[0]==="hello")
   {
     hello(text.trim().substring(5));
@@ -109,6 +112,13 @@ function help(){
 
   ....................................
   `)
+}
+
+var List = Array("task1","task2");
+function list(){
+  console.log(
+    List.map((element,key)=>`${key+1} - ${element}`).join('\n')
+  )
 }
 
 // The following line starts the application
