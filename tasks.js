@@ -80,16 +80,31 @@ function quit(){
   console.log('Quitting now, goodbye!')
   process.exit();
 }
+/**
+ * prints 
+ * "
+ * command        desciption
+ * .................................
+ * hello          greeting user.
+ * quit OR exit   end the application.
+ * help           show command.
+ * ..................................
+ * "
+ *
+ * Help command used to get an idea of the script you are running
+ * 
+ * @returns {void}
+ */
 function help(){
   console.log(`
   command\t\tdescription
 
-  .......................................
+  ....................................
   hello\t\t\tgreeting user.
   quit or exit\t\tend the application.
-  help\t\t\tto show command.
+  help\t\t\tshow script commands.
 
-  .......................................
+  ....................................
   `)
 }
 
