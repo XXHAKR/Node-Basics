@@ -102,9 +102,10 @@ function help(){
   command\t\tdescription
 
   ....................................
-  hello\t\t\tgreeting user.
-  quit or exit\t\tend the application.
-  help\t\t\tshow script commands.
+    hello\t\t\tgreeting user.
+     -hello (name)\t\tgreet user by type his name "hello (name)!"
+    quit or exit\t\tend the application.
+    help\t\t\tshow script commands.
 
   ....................................
   `)
