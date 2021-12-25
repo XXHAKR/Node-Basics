@@ -117,11 +117,18 @@ function help(){
   command\t\tdescription
 
   ....................................
-    hello\t\t\tgreeting user.
-     -hello (name)\t\tgreet user by type his name "hello (name)!"
+    hello\t\t\tuser greeting.
+    \t\t\t\t(usage)- hello "name"
+    
     quit or exit\t\tend the application.
     help\t\t\tshow script commands.
+    list\t\t\tlist command used to show the list of tasks.
+    add\t\t\t\tadd command used to add task to the tasks list.
+    \t\t\t\t(usage)- add "taskname"
 
+    remove\t\t\tremove command used to remove a task
+    \t\t\t\tfrom the tasks list by the number of the task.
+    \t\t\t\t(usage)- remove "number of task"
   ....................................
   `)
 }
@@ -142,7 +149,7 @@ function add(text) {
 function remove(index) {
   if(index.length==0){List.pop(); return;} 
   if(Number(index) >=1 && Number(index) <=List.length) {List.splice(index-1, 1);return;}
-  console.log("please type a valid number")
+  console.log("type a valid number")
 }
 
 // The following line starts the application
