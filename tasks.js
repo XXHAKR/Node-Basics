@@ -37,20 +37,24 @@ function onDataReceived(text) {
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
+
   else if (text === 'list\n'){
     list();
   }
 
-  else if(text.trim().split(" ")[0]==="hello")
-  {
+  else if(text.trim().split(" ")[0]==="hello") {
     hello(text.trim().substring(5));
   }
 
   else if (text.trim().split(" ")[0]==="add") {
     add(text.trim().substring(4));
-  } 
+  }
 
-  else if(text==='help\n'){
+  else if (text.trim().split(" ")[0] === "remove") {
+    remove(text.trim().substring(6));
+  }
+
+  else if(text==='help\n') {
     help();
   }
 
@@ -124,7 +128,7 @@ function help(){
 
 var List = Array("task1","task2");
 
-function list(){
+function list() {
   console.log(
     List.map((element,key)=>`${key+1} - ${element}`).join('\n')
   )
@@ -133,6 +137,12 @@ function list(){
 function add(text) {
   if(text.length==0){ console.log("you didn't input any data");return;}
   List.push(text)
+}
+
+function remove(index) {
+  if(index.length==0){List.pop(); return;} 
+  if(Number(index) >=1 && Number(index) <=List.length) {List.splice(index-1, 1);return;}
+  console.log("please type a valid number")
 }
 
 // The following line starts the application
