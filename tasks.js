@@ -149,7 +149,7 @@ function add(text) {
 function remove(index) {
   if(index.length==0){List.pop(); return;} 
   if(Number(index) >=1 && Number(index) <=List.length) {List.splice(index-1, 1);return;}
-  console.log("type a valid number")
+  console.log(" type a valid number ")
 }
 
 // The following line starts the application
